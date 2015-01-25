@@ -1,3 +1,5 @@
+# Multiples of 3 and 5
+
 # If we list all the natural numbers below 10 that are multiples of 3 or 5,
 # we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
@@ -9,5 +11,4 @@ def sum_multiples(accumulator, value):
   else:
     return accumulator
 
-# print sum_multiples(9, 10)
 print reduce(sum_multiples, range(1000), 0)
