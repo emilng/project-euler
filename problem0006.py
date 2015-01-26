@@ -10,14 +10,10 @@
 
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-def sum_squares(a, v):
-  return a + v**2
-
-def square_sum(nums):
-  return sum(nums)**2
-
 def sum_square_difference():
   nums = range(1,101)
-  return square_sum(nums) - reduce(sum_squares, nums)
+  square_sum = sum(nums)**2
+  sum_squares = reduce(lambda a, v: a + v**2, nums)
+  return square_sum - sum_squares
 
 print sum_square_difference()
