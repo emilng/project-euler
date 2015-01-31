@@ -38,13 +38,9 @@ def nums_to_words(num):
     thousands = ones_words[num_list[3]-1] + 'thousand'
     if hundreds != '' or tens != '' or ones != '':
       thousands = thousands + 'and'
-  # print thousands + hundreds + tens + ones
   return thousands + hundreds + tens + ones
 
 def char_count(num):
   return reduce(lambda a, v: a + len(nums_to_words(v)), range(1, num + 1), 0)
 
-map(nums_to_words, range(1, 1001))
-# print len(nums_to_words(342))
-# print len(nums_to_words(115))
 print char_count(1000)
