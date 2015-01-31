@@ -18,12 +18,9 @@ def nums_to_words(num):
   ones_words = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
   tens_words = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
   teens_words = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
-
   num_list = map(lambda x: int(x), list(str(num)))[::-1]
-  # print num_list
   ones = tens = hundreds = thousands = ''
   if num_list[0] > 0:
-    # print num_list[0]
     ones = ones_words[num_list[0]-1]
   if len(num_list) > 1 and num_list[1] == 1 and num_list[0] > 0:
     ones = ''
